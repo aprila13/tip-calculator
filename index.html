@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monday</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<style>
+  #results {
+  display: none;
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading display-5 pb-3">Tip Calculator</h1>
+          <form id="tip-form">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="number" class="form-control" id="billTotal" placeholder="Total Bill">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">No. of Guests</span>
+                <input type="number" class="form-control" id="guestAmount" placeholder="Number of Guests">
+              </div>
+            </div>
+            <div class="form-group tipPercent">
+              <div class="input-group">
+
+                <select class="form-select form-control" aria-label="Default select example" id="qos">
+                  <option selected>Quality of Service:</option>
+                  <option value="fair" id="fair">Fair</option>
+                  <option value="good" id="good">Good</option>
+                  <option value="great" id="great">Great</option>
+                </select>
+              </div>
+            </div>
+          </form>
+          <div class="row d-grid justify-content-md-center">
+            <button class="btn btn-primary col-sm-12" type="button" id="tipBtn">Get the Tip!</button>
+          </div>
+          <hr>
+          <!-- RESULTS -->
+          <div id="results" class="pt-4">
+            <h5>Results</h5>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Gratuity per Party Size</span>
+                <input type="number" class="form-control" id="partySize" disabled>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Tip amount</span>
+                <input type="number" class="form-control" id="tipAmount" disabled>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Total Bill with Tip</span>
+                <input type="number" class="form-control" id="totalBillWithTip" disabled>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
